@@ -10,7 +10,9 @@ app.secret_key = b'secret_key'
 
 @app.route('/')
 def index():
+    session['NAME'] = "test"
     user = session['NAME']
+    print(session['NAME'])
     return render_template('index.html', user=user)
 
 
