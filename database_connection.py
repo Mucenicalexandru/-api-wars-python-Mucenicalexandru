@@ -8,10 +8,10 @@ url = urllib.parse.urlparse(os.environ.get('DATABASE_URL'))
 
 
 def get_connection_string():
-    user_name = os.environ.get('PSQL_USER_NAME')  # export PSQL_USER_NAME=alex
-    password = os.environ.get('PSQL_PASSWORD')  # export PSQL_PASSWORD=1234
-    host = os.environ.get('PSQL_HOST')  # export PSQL_HOST=localhost
-    database_name = os.environ.get('PSQL_DB_NAME')  # export PSQL_DB_NAME=apiwars
+    user_name = "alex" # os.environ.get('PSQL_USER_NAME')  # export PSQL_USER_NAME=alex
+    password = "1234" # os.environ.get('PSQL_PASSWORD')  # export PSQL_PASSWORD=1234
+    host = "localhost" #os.environ.get('PSQL_HOST')  # export PSQL_HOST=localhost
+    database_name = "apiwars" #os.environ.get('PSQL_DB_NAME')  # export PSQL_DB_NAME=apiwars
     env_variables_defined = user_name and password and host and database_name
 
     if env_variables_defined:
