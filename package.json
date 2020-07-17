@@ -1,0 +1,23 @@
+{
+  "name": "api-wars-python-mucenicalexandru",
+  "version": "1.0.0",
+  "description": "## Story",
+  "main": "data_manager.mjs",
+  "dependencies": {
+    "pg": "^8.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node data_manager.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodecoolGlobal/api-wars-python-Mucenicalexandru.git"
+  },
+  "author": "alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodecoolGlobal/api-wars-python-Mucenicalexandru/issues"
+  },
+  "homepage": "https://github.com/CodecoolGlobal/api-wars-python-Mucenicalexandru#readme"
+}

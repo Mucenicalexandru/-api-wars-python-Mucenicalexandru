@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- The two below are used for modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  
+    <div class="title">
+        <h1>Star Wars universe planets</h1>
+        {%if session['NAME']%}
+        <h4>Signed in as:</h4><h4>{{user}}</h4>
+        {%else%}
+        <h4>No user signed in</h4>
+        <h5>Please sign in to Vote your favourite planet</h5>
+        {%endif%}
+        
+    </div>  
+
+
+  
+    <div class="container-fluid">
+        <button type="button" class="btn btn-secondary" id="next">Next</button>
+        <button type="button" class="btn btn-secondary" id="previous">Previous</button>
+    </div>
+
+    
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Diameter</th>
+                <th scope="col">Climate</th>
+                <th scope="col">Terrain</th>
+                <th scope="col">Surface Water Percentage</th>
+                <th scope="col">Population</th>
+                <th scope="col">Residents</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+
+
+
+            </tbody>
+        </table>
+
+<span>Page number</span> : <span id="page_number">1</span>
+
+
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <p class="modal-residents"></p>
+      </div>
+
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Height</th>
+              <th scope="col">Mass</th>
+              <th scope="col">Hair Color</th>
+              <th scope="col">Skin Color</th>
+              <th scope="col">Eye color</th>
+              <th scope="col">Birth Year</th>
+              <th scope="col">Gender</th>
+            </tr>
+          </thead>
+          <tbody class="residents-information">
+
+            
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-footer">
+        <button data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <h5 style="text-align: center;"></h5>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <button data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="{{url_for('static', filename='app.js')}}"></script>
+<script src="{{url_for('static', filename='data_manager.mjs')}}" type="module"></script>
+{%if session['NAME']%}
+<button type="button" class="btn btn-secondary"><a href="/logout" style="color: white;">Logout</a></button>
+{%else%}
+<button type="button" class="btn btn-secondary"><a href="/login" style="color: white;">Sign In</a></button>
+{%endif%}
+
+
+
+</body>
+</html>

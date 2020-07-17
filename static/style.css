@@ -1,0 +1,40 @@
+.container-fluid, .title {
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.register {
+    width: 350px;
+    height: 300px;
+    border: 0.5px solid steelblue;
+    margin-left: 775px;
+    margin-top: 250px;
+}
+
+.title {
+    margin-left: 52px;
+}
+
+.email_input, .password_input { 
+    margin-left: 52px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.register_button {
+    margin-left: 52px;
+    margin-top: 10px;
+    
+    
+}
+
+#password_label, #email_label {
+    margin-left: 52px;
+}
+
+#logout_button {
+    color: white;
+}
