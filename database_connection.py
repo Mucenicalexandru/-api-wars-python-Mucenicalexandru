@@ -7,22 +7,22 @@ urllib.parse.uses_netloc.append('postgres')
 url = urllib.parse.urlparse(os.environ.get('DATABASE_URL'))
 
 
-def get_connection_string():
-    user_name = os.environ.get('PSQL_USER_NAME')  # export PSQL_USER_NAME=alex
-    password = os.environ.get('PSQL_PASSWORD')  # export PSQL_PASSWORD=1234
-    host = os.environ.get('PSQL_HOST')  # export PSQL_HOST=localhost
-    database_name = os.environ.get('PSQL_DB_NAME')  # export PSQL_DB_NAME=apiwars
-    env_variables_defined = user_name and password and host and database_name
+# def get_connection_string():
+#     user_name = os.environ.get('PSQL_USER_NAME')  # export PSQL_USER_NAME=alex
+#     password = os.environ.get('PSQL_PASSWORD')  # export PSQL_PASSWORD=1234
+#     host = os.environ.get('PSQL_HOST')  # export PSQL_HOST=localhost
+#     database_name = os.environ.get('PSQL_DB_NAME')  # export PSQL_DB_NAME=apiwars
+#     env_variables_defined = user_name and password and host and database_name
 
-    if env_variables_defined:
-        return 'postgresql://{user_name}:{password}@{host}/{database_name}'.format(
-            user_name=user_name,
-            password=password,
-            host=host,
-            database_name=database_name
-        )
-    else:
-        raise KeyError('Some necessary environment variable(s) are not defined')
+#     if env_variables_defined:
+#         return 'postgresql://{user_name}:{password}@{host}/{database_name}'.format(
+#             user_name=user_name,
+#             password=password,
+#             host=host,
+#             database_name=database_name
+#         )
+#     else:
+#         raise KeyError('Some necessary environment variable(s) are not defined')
 
 
 def open_database():
